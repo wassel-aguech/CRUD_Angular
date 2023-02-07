@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "titre": "poste200",
+      "description": "poste k , ",
+      "categorie": "eco",
+      "date": "10/10/2005",
+      "id": 2
+    },
+    {
+      "titre": "hjjh  ",
+      "description": "poste 3 description",
+      "categorie": "sport",
+      "date": "14/05/2008",
+      "id": 3
+    },
+    {
+      "titre": "poste 2005",
+      "description": "poste valide",
+      "categorie": "eco",
+      "date": "12/02/2008",
+      "id": 4
+    },
+    {
+      "titre": "poste 888",
+      "description": "poste non valide",
+      "categorie": "culture",
+      "date": "12/02/2001",
+      "id": 5
+    }
+  ]
+}

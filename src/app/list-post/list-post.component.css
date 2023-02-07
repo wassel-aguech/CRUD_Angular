@@ -1,0 +1,55 @@
+header{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+table{
+    border: 2px solid black;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    background-color: greenyellow;
+}
+table th{
+    background-color: gray;
+}
+table td{
+    color: black;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: tahoma;
+    text-transform: uppercase;
+    color: red;
+}
+table td:hover{
+    background-color: crimson;
+    color: black;
+    letter-spacing: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+input{
+    width: 50%;
+    margin: auto;
+    transition: 0.5s;
+    font-weight: bold;
+}
+input:focus{
+    transform: scale(1.2);
+    background-color: black;
+    color: white;
+
+}

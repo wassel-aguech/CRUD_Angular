@@ -1,0 +1,41 @@
+<div class="container mt-3 ">
+    <form class="p-3" [formGroup]="postform" (submit)="update()">
+        <h1 class="TITRE mb-3 text-success text-center">UPDATE POST</h1>
+        <div class="form-group">
+            <input type="text" autofocus formControlName="titre" class="form-control mb-3 text-center"
+                placeholder="TITRE"
+                [ngClass]="{'is-invalid':submitted && postform.get('titre')?.errors ,'is-valid':submitted && !postform.get('titre')?.errors}">
+                <small class="invalid-feedback" *ngIf="postform.get('titre')?.hasError?.('required')">
+                    titre required</small>
+        </div>
+
+        <div class="form-group">
+            <input type="text" formControlName="description" class="form-control mb-3 text-center"
+                placeholder="DESCRIPTION"
+                [ngClass]="{'is-invalid':submitted && postform.get('description')?.errors ,'is-valid':submitted && !postform.get('description')?.errors}">
+                <small class="invalid-feedback" *ngIf="postform.get('description')?.hasError?.('required')">
+                    description required</small>
+            </div>
+
+            <div class="form-group">
+                <select class="form-select text-center " formControlName="categorie"
+                    [ngClass]="{'is-invalid':submitted && postform.get('categorie')?.errors ,'is-valid':submitted && !postform.get('categorie')?.errors}">
+                    <small class="invalid-feedback" *ngIf="postform.get('categorie')?.hasError?.('required')">
+                        titre required</small>
+                    <option value="sport">sport</option>
+                    <option value="tech">tech</option>
+                    <option value="eco">eco</option>
+                    <option value="culture">culture</option>
+                </select>
+            </div>
+     
+        <div class="form-group">
+            <input type="text" formControlName="date" class="form-control  text-center mt-3" placeholder="DATE"
+                [ngClass]="{'is-invalid':submitted && postform.get('date')?.errors ,'is-valid':submitted && !postform.get('date')?.errors}">
+                <small class="invalid-feedback" *ngIf="postform.get('date')?.hasError?.('required')">
+                    date required</small>
+        </div>
+
+        <button class="btn btn-success mt-3 w-100" type="submit"> UPDATE </button>
+    </form>
+</div>

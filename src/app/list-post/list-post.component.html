@@ -1,0 +1,31 @@
+<header>
+    <h1 class="text-warning text-center"> LIST POSTS</h1>
+    <input type="text" class="form-control" [(ngModel)]="namepost" placeholder=" SEARCH POST  ...!">
+    <a class="btn btn-success m-2" routerLink="/addpost">ADD NEW POST</a>
+</header>
+
+
+
+<table class="table text-center">
+    <tr>
+        <th>ID</th>
+        <th>TITRE</th>
+        <th>DESCRIPTION</th>
+        <th>CATEGORIE</th>
+        <th>DATE</th>
+        <th>ACTION</th>
+        <th></th>
+    </tr>
+    <tbody *ngFor="let post of listposts">
+        <tr *ngIf="post.titre.includes(namepost) || namepost== null">
+            <td> {{post.id}} </td>
+            <td>{{post.titre}}</td>
+            <td>{{post.description}}</td>
+            <td>{{post.categorie}}</td>
+            <td>{{post.date}}</td>
+
+            <td><button class="btn btn-warning" (click)="gotoupdate(post.id)">UPDATE</button></td>
+            <td><button class="btn btn-warning" (click)="delete(post.id)">DELETE</button></td>
+        </tr>
+    </tbody>
+</table>
